@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Hero6.css'
 
 export const Hero6 = () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import greekG from '../../assets/Elucid-Picture.svg'
 import creativeText from '../../assets/Creative-Text.svg'
 import designText from '../../assets/Design-Text.svg'

@@ -1,4 +1,3 @@
-import React from 'react'
 import cardArrow from '../../assets/Card-Arrow.svg'
 import branding from '../../assets/branding-icon.svg'
 import graphicD from '../../assets/Graphic-Design-icon.svg'

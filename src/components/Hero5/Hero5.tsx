@@ -1,5 +1,3 @@
-import React from 'react'
-import './Hero5.css'
 
 export const Hero5 = () => {
   return (

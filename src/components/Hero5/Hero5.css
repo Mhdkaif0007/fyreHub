@@ -1,0 +1,197 @@
+/* Packages.css
+   Matches: lime #AFFC41, dark gray #252525, near-black page bg #0F0F0F
+*/
+
+/* Optional: import a modern display font similar to your screenshots.
+   Uncomment & replace with your actual font if needed. */
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;500;700&display=swap'); */
+
+:root{
+  --lime: #AFFC41;
+  --dark: #252525;
+  --page-bg: #0F0F0F;
+  --white: #ffffff;
+  --card-radius: 20px;
+  --card-padding: 28px;
+  --glass-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Page / root */
+.packages-root{
+  background: var(--page-bg);
+  padding: 72px 28px;
+  min-height: 100vh;
+  color: var(--white);
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Title */
+.packages-title{
+  color: var(--lime);
+  text-align: center;
+  font-size: 48px;          /* adjust to match hero scale */
+  font-weight: 700;
+  margin: 0 0 48px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Grid layout */
+.packages-grid{
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr; /* mobile first */
+}
+
+/* Desktop columns */
+@media(min-width: 880px){
+  .packages-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.pkg-card{
+  background: var(--dark);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  border: 2px solid transparent;
+}
+
+/* Hover lift */
+.pkg-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+/* Featured card style */
+.pkg-featured{
+  border-color: var(--lime);
+  position: relative;
+}
+
+/* Header (name) */
+.pkg-header{
+  margin-bottom: 10px;
+}
+
+.pkg-name{
+  margin: 0;
+  color: var(--white);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* special featured heading color */
+.featured-name{
+  color: var(--lime);
+}
+
+/* List */
+.pkg-list{
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Add checkmark visuals */
+.pkg-item{
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Check icon using pseudo-element */
+.pkg-item::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: var(--lime);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+/* Add small white tick (using border trick) */
+.pkg-item::after{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  width: 6px;
+  height: 10px;
+  border: 2px solid var(--dark);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  box-sizing: content-box;
+}
+
+/* CTA area at bottom */
+.pkg-cta-wrap{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* CTA button */
+.pkg-cta{
+  background: var(--lime);
+  color: var(--dark);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+/* stronger CTA style for featured */
+.pkg-cta-strong{
+  box-shadow: 0 8px 22px rgba(175,252,65,0.12);
+}
+
+/* CTA hover */
+.pkg-cta:hover{
+  transform: translateY(-3px);
+  filter: brightness(0.96);
+  box-shadow: 0 10px 30px rgba(175,252,65,0.08);
+}
+
+/* Responsive text sizes */
+@media(min-width: 1100px){
+  .packages-title{ font-size: 56px; }
+  .pkg-name{ font-size: 30px; }
+  .pkg-list{ font-size: 17px; }
+}
+
+/* Small devices adjustments */
+@media(max-width: 560px){
+  .packages-root{ padding: 36px 18px; }
+  .packages-title{ font-size: 32px; margin-bottom: 26px; }
+  .pkg-card{ padding: 20px; min-height: 280px; }
+}
+
+/* Accessibility: focus outlines for keyboard users */
+.pkg-cta:focus{
+  outline: 3px dashed rgba(175,252,65,0.5);
+  outline-offset: 3px;
+}

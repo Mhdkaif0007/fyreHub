@@ -17,6 +17,7 @@ export const Hero6 = () => {
             <li className="pkg-item">1-page website (landing page)</li>
             <li className="pkg-item">Mobile responsive</li>
             <li className="pkg-item">Basic SEO setup</li>
+            <li className="pkg-item">Domain renewal &amp; management (annual, included as per package).</li>
           </ul>
 
           <div className="pkg-cta-wrap">
@@ -35,6 +36,7 @@ export const Hero6 = () => {
             <li className="pkg-item">Up to 5 pages (Home, About, Services, Portfolio, Contact)</li>
             <li className="pkg-item">Blog setup</li>
             <li className="pkg-item">Social media integration</li>
+            <li className="pkg-item">Domain renewal &amp; management (annual, included as per package).</li>
             <li className="pkg-item">On-page SEO</li>
           </ul>
 
@@ -55,6 +57,7 @@ export const Hero6 = () => {
             <li className="pkg-item">E-commerce functionality</li>
             <li className="pkg-item">Advanced SEO + analytics</li>
             <li className="pkg-item">Ongoing support &amp; maintenance</li>
+            <li className="pkg-item">Domain renewal &amp; management (annual, included as per package).</li>
           </ul>
 
           <div className="pkg-cta-wrap">

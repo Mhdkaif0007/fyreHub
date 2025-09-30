@@ -68,12 +68,16 @@
 /* Hover lift */
 .pkg-card:hover{
   transform: translateY(-8px);
+  border-color: var(--lime);
   box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+.pkg-card:hover .pkg-name {
+  color: var(--lime);
+  transition: color 220ms ease;
 }
 
 /* Featured card style */
 .pkg-featured{
-  border-color: var(--lime);
   position: relative;
 }
 
@@ -92,7 +96,7 @@
 
 /* special featured heading color */
 .featured-name{
-  color: var(--lime);
+  /* This color is now applied on hover */
 }
 
 /* List */

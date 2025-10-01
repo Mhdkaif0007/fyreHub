@@ -24,6 +24,9 @@ export const Hero5 = () => {
 
         {/* Growth */}
         <article className="pkg-card pkg-featured">
+          <div className="ribbon-wrapper">
+            <span className="ribbon">Best Value!</span>
+          </div>
           <header className="pkg-header">
             <h3 className="pkg-name featured-name">Growth</h3>
           </header>

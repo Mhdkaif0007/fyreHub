@@ -3,6 +3,54 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ribbon styles */
+.ribbon-wrapper {
+  position: relative;
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  overflow: hidden; /* Crucial for corner ribbons */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.ribbon {
+  position: absolute;
+  top: 20px; /* Adjust placement */
+  right: -50px; /* Adjust placement */
+  transform: rotate(45deg); /* Angle of the ribbon */
+  background-color: #ff6347; /* Ribbon color */
+  color: white;
+  padding: 5px 40px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Optional: Add a "tail" to the ribbon using pseudo-elements */
+.ribbon::before,
+.ribbon::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  bottom: -10px; /* Adjust for tail length */
+}
+
+.ribbon::before {
+  left: 0;
+  border-width: 10px 0 0 10px; /* Shape of the left tail */
+  border-left-color: #d94a32; /* Darker shade for depth */
+}
+
+.ribbon::after {
+  right: 0;
+  border-width: 10px 10px 0 0; /* Shape of the right tail */
+  border-right-color: #d94a32; /* Darker shade for depth */
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   filter: 10px;

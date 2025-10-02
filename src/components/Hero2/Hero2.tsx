@@ -7,7 +7,7 @@ import './Hero2.css'
 
 export const Hero2 = () => {
   return (
-    <div className='h-screen flex flex-col justify-around items-center'>
+    <div id="what-we-do" className='h-screen flex flex-col justify-around items-center'>
       <div className='m-28'>
         <p className='text-[#AFFC41] text-9xl'>what we do</p>
       </div>

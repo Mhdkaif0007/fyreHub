@@ -1,4 +1,7 @@
 
+import './Hero5.css'
+import { Link } from 'react-router-dom'
+
 export const Hero5 = () => {
   return (
     <section className="packages-root">
@@ -18,7 +21,9 @@ export const Hero5 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <button className="pkg-cta">Get Started</button>
+            <Link to="/contact?plan=marketing-starter">
+              <button className="pkg-cta">Get Started</button>
+            </Link>
           </div>
         </article>
 
@@ -39,7 +44,9 @@ export const Hero5 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <button className="pkg-cta pkg-cta-strong">Choose Growth</button>
+            <Link to="/contact?plan=marketing-growth">
+              <button className="pkg-cta pkg-cta-strong">Choose Growth</button>
+            </Link>
           </div>
         </article>
 
@@ -57,7 +64,9 @@ export const Hero5 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <button className="pkg-cta">Go Premium</button>
+            <Link to="/contact?plan=marketing-premium">
+              <button className="pkg-cta">Go Premium</button>
+            </Link>
           </div>
         </article>
       </div>

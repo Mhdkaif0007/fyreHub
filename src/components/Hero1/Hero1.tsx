@@ -7,7 +7,7 @@ import './Hero1.css'
 
 export const Hero1 = () => {
   return (
-    <div className='h-screen'>
+    <div id="about-us" className='h-screen'>
       <div className='h-full'>
         <div className='flex items-center justify-center relative w-full'>
           <div className='w-4/6 h-[532px] flex flex-col justify-center'>

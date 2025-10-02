@@ -1,0 +1,120 @@
+.contact-container {
+  min-height: auto;
+  background-color: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid #AFFC41;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-heading {
+  color: #AFFC41;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-subheading {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #AFFC41;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(175, 252, 65, 0.5);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #AFFC41;
+  box-shadow: 0 0 0 2px rgba(175, 252, 65, 0.25);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23AFFC41' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+.form-select option {
+  background-color: #252525;
+  color: white;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #AFFC41;
+  color: #252525;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #8fcc34;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  color: #AFFC41;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 1rem;
+}

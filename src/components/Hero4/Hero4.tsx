@@ -1,5 +1,6 @@
 
 import './Hero4.css'
+import { Link } from 'react-router-dom'
 
 export const Hero4 = () => {
   return (
@@ -20,7 +21,9 @@ export const Hero4 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <button className="pkg-cta">Get Started</button>
+            <Link to="/contact?plan=brand-starter">
+              <button className="pkg-cta">Get Started</button>
+            </Link>
           </div>
         </article>
 
@@ -41,7 +44,9 @@ export const Hero4 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <button className="pkg-cta pkg-cta-strong">Choose Growth</button>
+            <Link to="/contact?plan=brand-growth">
+              <button className="pkg-cta pkg-cta-strong">Choose Growth</button>
+            </Link>
           </div>
         </article>
 
@@ -59,7 +64,9 @@ export const Hero4 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <button className="pkg-cta">Go Premium</button>
+            <Link to="/contact?plan=brand-premium">
+              <button className="pkg-cta">Go Premium</button>
+            </Link>
           </div>
         </article>
       </div>

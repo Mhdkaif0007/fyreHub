@@ -5,6 +5,7 @@ import { Hero3 } from '../components/Hero3/Hero3'
 import { Hero4 } from '../components/Hero4/Hero4'
 import { Hero5 } from '../components/Hero5/Hero5'
 import { Hero6 } from '../components/Hero6/Hero6'
+import { ContactUs } from './ContactUs'
 
 export const Home = () => {
   return (
@@ -16,8 +17,7 @@ export const Home = () => {
       <Hero4 />
       <Hero5/>
       <Hero6/>
-
-
+      <ContactUs />
     </div>
   )
 }

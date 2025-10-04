@@ -1,6 +1,6 @@
 
 import './Hero6.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export const Hero6 = () => {
   return (

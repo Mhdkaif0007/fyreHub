@@ -6,6 +6,6 @@ export default defineConfig({
     base: '/fyreHub/',
   plugins: [react()],
   build: {
-    outDir: 'build', // Specify the output directory
+    outDir: 'dist', // Specify the output directory
   },
 })

@@ -27,10 +27,12 @@
 
 .work-cards-container-1 div {
   animation: scroll-right 5s linear infinite;
+  animation-play-state: running;
 }
 
 .work-cards-container-2 div {
   animation: scroll-left 5s linear infinite;
+  animation-play-state: running;
 }
 
 /* Add margin to create space between work-cards-container-2 and any text above it */
@@ -40,4 +42,9 @@
   margin-top: 5px; /* Add space above the scrolling container */
   position: relative;
   z-index: 0;
+}
+
+.work-cards-container-1:hover div,
+.work-cards-container-2:hover div {
+  animation-play-state: paused;
 }

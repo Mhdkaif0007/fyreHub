@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './ContactUs.css';
 
 export const ContactUs = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,6 +35,15 @@ export const ContactUs = () => {
     setError('');
   };
 
+  // Keep selectedPlan in sync with URL ?plan=...
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const plan = params.get('plan');
+    if (plan) {
+      setFormData(prev => ({ ...prev, selectedPlan: plan }));
+    }
+  }, [location]);
+
   return (
     <div id="contact-section" className="contact-container">
       <h1 className="contact-heading">Contact Us</h1>
@@ -42,7 +53,7 @@ export const ContactUs = () => {
           : 'Tell us about your project and we will get back to you soon!'}
       </p>
 
-      <div className="contact-form-container">
+      <div id="contact-form-container" className="contact-form-container">
         {submitted ? (
           <div className="success-message">
             <h2>Thank you for contacting us!</h2>

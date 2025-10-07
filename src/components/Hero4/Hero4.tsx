@@ -1,6 +1,5 @@
 
 import './Hero4.css'
-import { Link } from 'react-router-dom'
 
 export const Hero4 = () => {
   return (
@@ -21,9 +20,21 @@ export const Hero4 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <Link to="/contact?plan=brand-starter">
+            <a href="#contact-section" onClick={(e) => {
+              e.preventDefault()
+              const url = new URL(window.location.href)
+              url.searchParams.set('plan', 'brand-starter')
+              window.history.replaceState({}, '', url.toString())
+              const el = document.getElementById('contact-form-container') || document.getElementById('contact-section')
+              if (el) {
+                const nav = document.querySelector('[data-nav-container]') as HTMLElement | null
+                const offset = nav ? nav.getBoundingClientRect().height + 10 : 80
+                const y = el.getBoundingClientRect().top + window.scrollY - offset
+                window.scrollTo({ top: y, behavior: 'smooth' })
+              }
+            }}>
               <button className="pkg-cta">Get Started</button>
-            </Link>
+            </a>
           </div>
         </article>
 
@@ -44,9 +55,21 @@ export const Hero4 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <Link to="/contact?plan=brand-growth">
+            <a href="#contact-section" onClick={(e) => {
+              e.preventDefault()
+              const url = new URL(window.location.href)
+              url.searchParams.set('plan', 'brand-growth')
+              window.history.replaceState({}, '', url.toString())
+              const el = document.getElementById('contact-form-container') || document.getElementById('contact-section')
+              if (el) {
+                const nav = document.querySelector('[data-nav-container]') as HTMLElement | null
+                const offset = nav ? nav.getBoundingClientRect().height + 10 : 80
+                const y = el.getBoundingClientRect().top + window.scrollY - offset
+                window.scrollTo({ top: y, behavior: 'smooth' })
+              }
+            }}>
               <button className="pkg-cta pkg-cta-strong">Choose Growth</button>
-            </Link>
+            </a>
           </div>
         </article>
 
@@ -64,9 +87,21 @@ export const Hero4 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <Link to="/contact?plan=brand-premium">
+            <a href="#contact-section" onClick={(e) => {
+              e.preventDefault()
+              const url = new URL(window.location.href)
+              url.searchParams.set('plan', 'brand-premium')
+              window.history.replaceState({}, '', url.toString())
+              const el = document.getElementById('contact-form-container') || document.getElementById('contact-section')
+              if (el) {
+                const nav = document.querySelector('[data-nav-container]') as HTMLElement | null
+                const offset = nav ? nav.getBoundingClientRect().height + 10 : 80
+                const y = el.getBoundingClientRect().top + window.scrollY - offset
+                window.scrollTo({ top: y, behavior: 'smooth' })
+              }
+            }}>
               <button className="pkg-cta">Go Premium</button>
-            </Link>
+            </a>
           </div>
         </article>
       </div>

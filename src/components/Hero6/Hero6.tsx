@@ -22,7 +22,19 @@ export const Hero6 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <a href="#contact-section">
+            <a href="#contact-section" onClick={(e) => {
+              e.preventDefault()
+              const url = new URL(window.location.href)
+              url.searchParams.set('plan', 'web-starter')
+              window.history.replaceState({}, '', url.toString())
+              const el = document.getElementById('contact-form-container') || document.getElementById('contact-section')
+              if (el) {
+                const nav = document.querySelector('[data-nav-container]') as HTMLElement | null
+                const offset = nav ? nav.getBoundingClientRect().height + 10 : 80
+                const y = el.getBoundingClientRect().top + window.scrollY - offset
+                window.scrollTo({ top: y, behavior: 'smooth' })
+              }
+            }}>
               <button className="pkg-cta">Get Started</button>
             </a>
           </div>
@@ -47,7 +59,19 @@ export const Hero6 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <a href="#contact-section">
+            <a href="#contact-section" onClick={(e) => {
+              e.preventDefault()
+              const url = new URL(window.location.href)
+              url.searchParams.set('plan', 'web-growth')
+              window.history.replaceState({}, '', url.toString())
+              const el = document.getElementById('contact-form-container') || document.getElementById('contact-section')
+              if (el) {
+                const nav = document.querySelector('[data-nav-container]') as HTMLElement | null
+                const offset = nav ? nav.getBoundingClientRect().height + 10 : 80
+                const y = el.getBoundingClientRect().top + window.scrollY - offset
+                window.scrollTo({ top: y, behavior: 'smooth' })
+              }
+            }}>
               <button className="pkg-cta pkg-cta-strong">Choose Growth</button>
             </a>
           </div>
@@ -69,7 +93,19 @@ export const Hero6 = () => {
           </ul>
 
           <div className="pkg-cta-wrap">
-            <a href="#contact-section">
+            <a href="#contact-section" onClick={(e) => {
+              e.preventDefault()
+              const url = new URL(window.location.href)
+              url.searchParams.set('plan', 'web-premium')
+              window.history.replaceState({}, '', url.toString())
+              const el = document.getElementById('contact-form-container') || document.getElementById('contact-section')
+              if (el) {
+                const nav = document.querySelector('[data-nav-container]') as HTMLElement | null
+                const offset = nav ? nav.getBoundingClientRect().height + 10 : 80
+                const y = el.getBoundingClientRect().top + window.scrollY - offset
+                window.scrollTo({ top: y, behavior: 'smooth' })
+              }
+            }}>
               <button className="pkg-cta">Go Premium</button>
             </a>
           </div>
